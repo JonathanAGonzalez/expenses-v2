@@ -3,9 +3,11 @@ import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
+import { HeaderLayout } from "./src/core/components/header-layout.component";
 
-import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
+import { siteConfig } from "@/config/site";
+import bg from "@/assets/bg.png";
 
 export const metadata: Metadata = {
   title: {
@@ -38,13 +40,15 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
         )}
+        style={{
+          backgroundImage: `url(${bg.src})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-              {children}
-            </main>
-          </div>
+          <HeaderLayout />
+          <main>{children}</main>
         </Providers>
       </body>
     </html>
