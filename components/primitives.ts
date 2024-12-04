@@ -11,11 +11,12 @@ export const title = tv({
       green: "from-[#6FEE8D] to-[#17c964]",
       pink: "from-[#FF72E1] to-[#F54C7A]",
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
+      lightColor: "from-[#FFFFFF] to-[#E5E5E5]",
     },
     size: {
       sm: "text-3xl lg:text-4xl",
-      md: "text-[2.3rem] lg:text-5xl leading-9",
-      lg: "text-4xl lg:text-6xl",
+      md: "text-md",
+      lg: "text-[25px] font-bold",
     },
     fullWidth: {
       true: "w-full block",
