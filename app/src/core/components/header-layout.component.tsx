@@ -7,7 +7,7 @@ export const HeaderLayout = () => {
     <header className="flex items-center justify-between p-4">
       <h1
         className={title({
-          color: "lightColor",
+          color: "brand-gradient-white-to-gray",
           size: "lg",
         })}
       >
