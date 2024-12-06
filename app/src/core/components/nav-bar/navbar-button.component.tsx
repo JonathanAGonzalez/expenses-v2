@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 
-import { NavbarButtonProps } from "@/app/src/types/navbar-button.types";
+import { TypeNavbarButton } from "@/app/src/types/navbar-button.types";
 
-export const NavbarButton: React.FC<NavbarButtonProps> = ({
+export const NavbarButton: React.FC<TypeNavbarButton> = ({
   label,
   iconSrc,
   onClick,
