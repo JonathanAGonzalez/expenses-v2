@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 import { Providers } from "./providers";
 import { HeaderLayout } from "./src/core/components/header-layout.component";
+import { IsMobileHoc } from "./src/core/HOC/is-mobile.hoc";
 
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
@@ -36,7 +37,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        <link rel="manifest" href="/manifest.json" />
+        <link href="/manifest.json" rel="manifest" />
       </head>
       <body
         className={clsx(
@@ -50,8 +51,10 @@ export default function RootLayout({
         }}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <HeaderLayout />
-          <main className="p-4">{children}</main>
+          <IsMobileHoc>
+            <HeaderLayout />
+            <main className="p-4">{children}</main>
+          </IsMobileHoc>
         </Providers>
       </body>
     </html>
