@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  manifest: "/manifest.json",
 };
 
 export const viewport: Viewport = {
@@ -34,7 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
