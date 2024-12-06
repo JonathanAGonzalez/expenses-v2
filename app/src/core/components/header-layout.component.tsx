@@ -9,6 +9,7 @@ export const HeaderLayout = () => {
         className={title({
           color: "brand-gradient-white-to-gray",
           size: "lg",
+          className: "font-bold",
         })}
       >
         WalletBear
