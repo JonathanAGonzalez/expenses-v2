@@ -1,24 +1,27 @@
-import b from "@/assets/supermarket.png";
+import supermarket from "@/assets/categories/supermarket.png";
+import education from "@/assets/categories/school.png";
+import services from "@/assets/categories/services.png";
+import bank from "@/assets/categories/bank.png";
 
-export const categoriesDefault = [
+export const homeSectionCategoriesDefault = [
   {
     id: "1",
-    image: b.src,
+    image: supermarket.src,
     title: "Supermercado",
   },
   {
     id: "2",
-    image: b.src,
-    title: "Supermercado",
+    image: bank.src,
+    title: "Banco",
   },
   {
     id: "3",
-    image: b.src,
-    title: "Supermercado",
+    image: education.src,
+    title: "Educación",
   },
   {
     id: "4",
-    image: b.src,
-    title: "Supermercado",
+    image: services.src,
+    title: "Servicios",
   },
 ];

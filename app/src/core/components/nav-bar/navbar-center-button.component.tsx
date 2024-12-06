@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/button";
 
 interface NavbarCenterButtonProps {
   buttonBgSrc: string;
-  onClick?: () => void;
+  onClick: () => void;
 }
 
 export const NavbarCenterButton: React.FC<NavbarCenterButtonProps> = ({
