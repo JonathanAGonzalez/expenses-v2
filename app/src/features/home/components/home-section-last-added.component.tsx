@@ -1,19 +1,35 @@
-import { CardPayment } from "@/app/src/core/components/card-payment.component";
-import { SubTitle } from "@/app/src/core/components/sub-title.component";
+import { CardPaymentSection } from "@/app/src/core/components/card-payment-section.component";
 
 export const HomeSectionLastAdded = () => {
   return (
-    <section className="pt-8">
-      <SubTitle>Ultimos agregados</SubTitle>
-      <div className="grid gap-3 pt-2 pb-[95px]">
-        <CardPayment />
-        <CardPayment />
-        <CardPayment />
-        <CardPayment />
-        <CardPayment />
-        <CardPayment />
-        <CardPayment />
-      </div>
-    </section>
+    <CardPaymentSection
+      items={[
+        {
+          amount: 320,
+          date: "Martes 10 nov",
+          label: "Stream",
+          title: "Netflix",
+          image: "",
+          id: "1",
+        },
+        {
+          amount: 320,
+          date: "Martes 10 nov",
+          label: "Stream",
+          title: "Netflix",
+          image: "",
+          id: "2",
+        },
+        {
+          amount: 320,
+          date: "Martes 10 nov",
+          label: "Stream",
+          title: "Netflix",
+          image: "",
+          id: "3",
+        },
+      ]}
+      subTitle="Ultimos agregados"
+    />
   );
 };
