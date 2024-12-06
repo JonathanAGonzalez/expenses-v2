@@ -11,7 +11,7 @@ export default function Home() {
       <section>
         <HomeWidget />
         <HomeHeaderTitleCategory />
-        <section className="grid grid-cols-2 gap-y-2 gap-x-5 pt-2 [@media(max-width:400px)]:grid-cols-1">
+        <section className="grid grid-cols-2 gap-y-2 gap-x-5 pt-2 [@media(max-width:383px)]:grid-cols-1">
           <CardWithBorder />
           <CardWithBorder />
           <CardWithBorder />

@@ -7,7 +7,7 @@ export const CardPayment = () => {
   return (
     <article className="flex justify-between p-4 rounded-2xl bg-brand-gradient-black-transparent">
       <div className="flex gap-4 items-center">
-        <Image src={netflix.src} alt="Netflix" width={49} height={49} />
+        <Image alt="Netflix" height={49} src={netflix.src} width={49} />
         <div>
           <h2 className="font-light">Netflix</h2>
           <p className="text-brand-white text-[10px]">Stream</p>
