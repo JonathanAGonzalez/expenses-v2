@@ -43,7 +43,7 @@ type CategoryKey =
   | "services"
   | "stream"
   | "credit card"
-  | "default category"
+  // | "default category"
   | "supermarket"
   | "school";
 
@@ -56,7 +56,7 @@ const ids: Record<CategoryKey, string> = {
   services: "m8qpewalttcmc8bf9imu",
   stream: "evy2qxvuaexpij8qdkoz",
   "credit card": "pzdqxa4hapvm7ev6koyu",
-  "default category": "wr8gszdig1efdf7qykqg",
+  // "default category": "wr8gszdig1efdf7qykqg",
   supermarket: "t99hdsvsdpg5pf6anok3",
   school: "ynnwi2ly91tqcyxuuspc",
 };
@@ -69,7 +69,7 @@ const labels: Record<CategoryKey, string> = {
   services: "Servicios",
   stream: "Streaming",
   "credit card": "Tarjeta de Crédito",
-  "default category": "Categoría por Defecto",
+  // "default category": "Categoría por Defecto",
   supermarket: "Supermercado",
   school: "Escuela",
 };

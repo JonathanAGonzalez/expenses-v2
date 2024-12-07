@@ -1,11 +1,13 @@
-"use client";
-
+import { headers } from "next/headers";
 import { ReactNode } from "react";
 
-import { useMobile } from "../hooks/is-mobile.hook";
-
 export const IsMobileHoc = ({ children }: { children: ReactNode }) => {
-  const isMobile = useMobile();
+  const headersList = headers(); // Accede a los headers de la solicitud
+  const userAgent = headersList.get("user-agent") || "";
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      userAgent,
+    );
 
   if (!isMobile) {
     if (!isMobile) {

@@ -3,7 +3,6 @@ import { Navbar } from "./src/core/components/nav-bar";
 import { HomeSectionCategory } from "./src/features/home/components/home-section-category.component";
 import { HomeSectionLastAdded } from "./src/features/home/components/home-section-last-added.component";
 import { homeSectionCategoriesDefault } from "./src/core/categories-default";
-import { categoriesObjectToSend } from "./src/cloudinary";
 
 export default function Home() {
   return (
