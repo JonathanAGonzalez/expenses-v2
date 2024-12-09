@@ -12,6 +12,7 @@ module.exports = {
       "brand-light-green": "#73E0A9",
       "brand-white": "#E6E6E6",
       "brand-gradient-black-transparent": "rgba(5,5,5,0.71)",
+      "brand-black": "#141314",
     },
     extend: {
       backgroundImage: {

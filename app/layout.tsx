@@ -5,6 +5,8 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 import { HeaderLayout } from "./src/core/components/header-layout.component";
 import { IsMobileHoc } from "./src/core/HOC/is-mobile.hoc";
+import { Navbar } from "./src/core/components/nav-bar";
+import { SuccessNotification } from "./src/core/components/success-notificaction.component";
 
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
@@ -35,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="es">
       <head>
         <link href="/manifest.json" rel="manifest" />
       </head>
@@ -53,7 +55,12 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <IsMobileHoc>
             <HeaderLayout />
-            <main className="p-4">{children}</main>
+            <main className="p-4">
+              {children}
+              <SuccessNotification />
+            </main>
+
+            <Navbar />
           </IsMobileHoc>
         </Providers>
       </body>
