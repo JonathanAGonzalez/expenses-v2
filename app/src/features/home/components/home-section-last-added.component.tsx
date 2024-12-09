@@ -1,35 +1,6 @@
 import { CardPaymentSection } from "@/app/src/core/components/card-payment-section.component";
+import { Payment } from "@/app/src/firebase/firebase-get-payments";
 
-export const HomeSectionLastAdded = () => {
-  return (
-    <CardPaymentSection
-      items={[
-        {
-          amount: 320,
-          date: "Martes 10 nov",
-          label: "Stream",
-          title: "Netflix",
-          image: "",
-          id: "1",
-        },
-        {
-          amount: 320,
-          date: "Martes 10 nov",
-          label: "Stream",
-          title: "Netflix",
-          image: "",
-          id: "2",
-        },
-        {
-          amount: 320,
-          date: "Martes 10 nov",
-          label: "Stream",
-          title: "Netflix",
-          image: "",
-          id: "3",
-        },
-      ]}
-      subTitle="Ultimos agregados"
-    />
-  );
+export const HomeSectionLastAdded = ({ payments }: { payments: Payment[] }) => {
+  return <CardPaymentSection items={payments} subTitle="Ultimos agregados" />;
 };

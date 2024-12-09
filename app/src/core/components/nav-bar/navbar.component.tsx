@@ -10,29 +10,18 @@ import home from "@/assets/navigation/computer-front-gradient.png";
 import user from "@/assets/navigation/boy-front-gradient.png";
 import moneyBag from "@/assets/navigation/money-bag-front-gradient.png";
 import zoom from "@/assets/navigation/zoom-front-gradient.png";
-import { addDocument } from "@/app/src/firebase/firebase-add";
-import { db } from "@/app/src/firebase/";
-import { categoriesObjectToSend } from "@/app/src/cloudinary";
 
 export const Navbar: React.FC = () => {
-  const add = () => {
-    Promise.all(
-      categoriesObjectToSend.map(async (item) => {
-        await addDocument({
-          db,
-          data: item,
-          nameCollection: "categories-default",
-        });
-      }),
-    );
-  };
-
   return (
-    <nav className="fixed bottom-0 left-0 w-full flex items-center justify-center">
+    <nav className="fixed bottom-0 left-0 w-full flex items-center justify-center z-30">
       <div className="absolute bottom-1 left-2 z-10">
         <ul className="flex gap-3">
-          <NavbarButton iconSrc={home.src} label="Inicio" />
-          <NavbarButton iconSrc={zoom.src} label="Categorías" />
+          <NavbarButton href="/" iconSrc={home.src} label="Inicio" />
+          <NavbarButton
+            href="/categories"
+            iconSrc={zoom.src}
+            label="Categorías"
+          />
         </ul>
       </div>
 
@@ -45,18 +34,17 @@ export const Navbar: React.FC = () => {
           src={bg.src}
           width={450}
         />
-        <NavbarCenterButton
-          buttonBgSrc={buttonBg.src}
-          onClick={() => {
-            add();
-          }}
-        />
+        <NavbarCenterButton buttonBgSrc={buttonBg.src} href="/add-payment" />
       </div>
 
       <div className="absolute bottom-1 right-4 z-10">
         <ul className="flex gap-3">
-          <NavbarButton iconSrc={moneyBag.src} label="Gastos" />
-          <NavbarButton iconSrc={user.src} label="Perfil" />
+          <NavbarButton
+            href="/payments"
+            iconSrc={moneyBag.src}
+            label="Gastos"
+          />
+          <NavbarButton href="/profile" iconSrc={user.src} label="Perfil" />
         </ul>
       </div>
     </nav>

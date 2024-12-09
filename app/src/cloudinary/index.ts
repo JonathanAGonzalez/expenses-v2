@@ -88,11 +88,6 @@ export const categoriesObjectToSend = Object.entries(ids).map(
     key,
     label: labels[key as CategoryKey], // Usar el tipo explícito
     id: generateRandomId(),
-    value: generateImageUrl(cloudinaryId),
+    imageSrc: generateImageUrl(cloudinaryId),
   }),
-);
-
-console.log(
-  categoriesObjectToSend,
-  "categoriesObjectToSendcategoriesObjectToSend",
 );

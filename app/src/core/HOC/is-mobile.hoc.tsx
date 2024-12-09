@@ -2,7 +2,7 @@ import { headers } from "next/headers";
 import { ReactNode } from "react";
 
 export const IsMobileHoc = ({ children }: { children: ReactNode }) => {
-  const headersList = headers(); // Accede a los headers de la solicitud
+  const headersList = headers();
   const userAgent = headersList.get("user-agent") || "";
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -11,7 +11,11 @@ export const IsMobileHoc = ({ children }: { children: ReactNode }) => {
 
   if (!isMobile) {
     if (!isMobile) {
-      return <h2>Solamente en celular</h2>;
+      return (
+        <div className="flex justify-center items-center min-h-screen">
+          <h3>Conectate desde el celular 😊</h3>
+        </div>
+      );
     }
   }
 

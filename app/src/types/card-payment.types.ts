@@ -1,7 +1,7 @@
 export interface TypeCardPayment {
   title: string;
   label: string;
-  amount: number;
+  price: number;
   date: string;
   image: string;
   id: string;
